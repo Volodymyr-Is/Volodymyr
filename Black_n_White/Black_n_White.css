@@ -1,0 +1,330 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+header{
+    background-image: url(apples.jpg);
+    height: 550px;
+    background-size: contain;
+}
+
+.menu_header{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 50px;
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+li{
+    list-style: none;
+    display: flex;
+}
+
+.menu_header ul{
+    display: flex;
+    font-size: 18px;
+    gap: 20px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+
+.title p{
+    color: white;
+    font-size: 50px;
+    margin-bottom: 1px;
+}
+
+.title h4{
+    margin-top: 5px;
+}
+
+.logo h3{
+    margin-top: 50px;
+    font-size: 17px;
+    padding: 10px 35px 10px 35px;
+    border: 3px solid white;
+    background-color: rgb(69, 69, 69);
+}
+
+.title span{
+    font-size: 70px;
+}
+
+.r1{
+    margin-top: 50px;
+    height: 160px;
+}
+
+.r1 p:first-child{
+    float: left;
+    width: 500px;
+    margin-left: 200px;
+    font-size: 22px;
+}
+
+.r1 p:last-child{
+    float: right;
+    width: 550px;
+    margin-right: 200px;
+    font-size: 17px;
+}
+
+.r1 span{
+    font-size: 25px;
+    font-weight: 800;
+}
+
+
+.r2{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 100px;
+    margin-bottom: 80px;
+}
+
+.r2 span{
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.main_content{
+    background-color: rgb(224, 222, 222);
+    height: 100%;
+}
+
+.article{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.like_box1{
+    background-image: url(sample.jpg);
+    width: 770px;
+    height: 300px;
+    position: relative;
+    color: white;
+}
+
+.like{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(128, 128, 128, 0.672);
+    border: 2px solid white;
+    margin: 20px;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+}
+
+.like_data{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    padding: 5px;
+    font-size: 19px;
+    font-weight: 800;
+    color: white;
+}
+
+.r3{
+    width: 700px;
+    margin: 50px;
+    font-size: 23px;
+    text-align: center;
+}
+
+.like_box2{
+    background-image: url(sample3.jpg);
+    width: 770px;
+    height: 300px;
+    position: relative;
+    color: white;
+}
+
+.email_main{
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    background-color: white;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.email{
+    display: flex;
+    width: 1296px;
+    height: 150px;
+    margin: 20px auto 50px auto;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.email p{
+    font-size: 30px;
+    margin: 0 15px 0 5px;
+}
+
+.email span{
+    font-weight: 800;
+}
+
+.r4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.email button{
+    width: 120px;
+    height: 50px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+}
+
+.email input{
+    width: 600px;
+    height: 44px;
+    background-color: rgba(120, 120, 120, 0.316);
+    color: white;
+    border: 2px solid black;
+    margin-left: 40px;
+}
+
+.email input::placeholder{
+    color: black;
+    padding: 30px;
+    font-size: 15px;
+}
+
+.footer{
+    display: flex;
+    background-color: white;
+    gap: 20px;
+    color: rgb(142, 142, 142);
+}
+
+.r5{
+    color: black;
+    font-size: large;
+    font-weight: 800;
+}
+
+.black_white{
+    width: 200px;
+    float: left;
+    margin-left: 250px;
+}
+
+.contact{
+    width: 175px;
+    float: left;
+    margin-left: 250px;
+}
+
+.last_tweet{
+    width: 200px;
+    float: left;
+    margin-left: 250px;
+}
+
+
+.newsletter{
+    width: 800px;
+    float: left;
+    margin-left: 250px;
+    justify-content: center;
+}
+
+
+.email_footer{
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    background-color: white;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.em{
+    width: 700px;
+    height: 100px;
+    margin: 20px 0 50px 0;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.em p{
+    font-size: 15px;
+    margin: 0 15px 0 0;
+    width: 400px;
+}
+
+.em span{
+    font-weight: 800;
+}
+
+.em button{
+    width: 120px;
+    height: 50px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+}
+
+.em input{
+    width: 300px;
+    height: 44px;
+    background-color: rgba(120, 120, 120, 0.316);
+    color: white;
+    border: 2px solid black;
+    margin-top: 15px;
+    position: relative;
+}
+
+.em input::placeholder{
+    color: black;
+    padding: 30px;
+    font-size: 15px;
+}
+
+.foot_mini_info{
+    border-top: 3px lightgray solid;
+}
+
+.foot_mini_info p{
+    color: gray; 
+    margin-left: 20px; 
+    float: left;
+}
+
+.foot_mini_info div{
+    float: right; 
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.foot_mini_info div a{
+    margin: 0 5px 0 5px;
+}
