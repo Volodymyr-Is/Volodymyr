@@ -1,0 +1,146 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.r1{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 50px;
+    margin-bottom: 80px;
+    font-weight: 800;
+}
+
+.main_content{
+    background-color: white;
+    height: 100%;
+    color: black;
+}
+
+.main_content ul{
+    list-style: none;
+    justify-content: left;
+    justify-content: left;
+}
+
+.main_content ul li{
+    font-size: 12px;
+    font-weight: 800;
+    color: #54597d;
+    border-bottom: 2px #5d5d5d solid;
+}
+
+.article{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: center;
+    height: 350px;
+}
+
+.moon_info_box1{
+    background-image: url(dark-side.png);
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    color: white;
+}
+
+.moon_info_box2{
+    background-image: url(earth-tides.png);
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    color: white;
+}
+
+.moon_info_box3{
+    background-image: url(drifting-moon.png);
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    color: white;
+}
+
+.moon_info_box4{
+    background-image: url(less-weight-on-the-moon.png);
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    color: white;
+}
+
+.moon_info_box5{
+    background-image: url(12-americans.png);
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    color: white;
+}
+
+.moon_info_box6{
+    background-image: url(no-atmosphere.png);
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    color: white;
+}
+
+.moon_info_box7{
+    background-image: url(moon-quakes.png);
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    color: white;
+}
+
+.moon_info_box8{
+    background-image: url(spacecraft.png);
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    color: white;
+}
+
+.moon_info_box9{
+    background-image: url(moon-station.png);
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    color: white;
+}
+
+.moon_info_box10{
+    background-image: url(nuclear-bomb.png);
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    color: white;
+}
+
+.r2{
+    width: 400px;
+    margin: 50px;
+    font-size: 23px;
+    text-align: left;
+}
+
+.r2 p{
+    font-size: 15px;
+    color: #717171;
+}
+
+.r3{
+    position: relative; 
+}
+
+.r4{
+    position: relative;
+    float: left;
+}
