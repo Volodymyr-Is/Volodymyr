@@ -20,21 +20,11 @@ const defaultTheme = createTheme();
 
 
 const  SignIn = () => {
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     const data = new FormData(event.currentTarget);
-    //     console.log({
-    //     email: data.get('email'),
-    //     password: data.get('password'),
-    //     });
-    // };
-
     const [password, setPassword] = useState('');
     const [login, setLogin] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
-
-    // console.log(login, password);
+    
 
     const database = [
         {
