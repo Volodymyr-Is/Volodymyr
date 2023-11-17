@@ -39,7 +39,6 @@ const NewPosts = () => {
             data['body'] = e.target.value;
         }
         setNewPost(data)
-        //  console.log(e.target.id);
     }
     console.log(newPost);
 
@@ -74,7 +73,6 @@ const NewPosts = () => {
     }, [])
     return(
         <div style={{textAlign:"center", marginBottom:"30px"}}>
-            {/* <div style={{fontWeight: "bold", marginTop: "10px", marginBottom: "20px", textAlign:"center"}}>Post List</div> */}
             <Typography component="h1" variant="h5" style={{fontWeight: "bold", margin: "25px 0 30px 0"}}>Create New Post</Typography>
             {postData.map(user => 
             <div key={user.id} style={{marginBottom: "30px", border: "2px solid black", marginLeft: "25%", marginRight:"25%", padding: "10px"}}>
@@ -110,7 +108,6 @@ const NewPosts = () => {
                         label="Title" 
                         style={{marginTop:"10px", width: "350px"}}
                         onChange={handleNewPost}>
-                            {/* <input type='text' onChange={handleNewPost}/> */}
                         </TextField>
                     </div>
                     <div style={{marginTop:"7px"}}>
@@ -119,7 +116,6 @@ const NewPosts = () => {
                         label="Body" 
                         style={{marginTop:"10px", width: "350px"}}
                         onChange={handleNewPost}>
-                            {/* <input type='text' onChange={handleNewPost}/> */}
                         </TextField>
                     </div>
                     <Button
