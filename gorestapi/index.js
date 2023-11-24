@@ -3,24 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Login from './Login';
-import Users from './Users';
-import Posts from './Posts';
-// import { ApolloClient, InMemoryCache, ApolloProvider, gql } from 'apollo/client';
+import Login from './NewLogin';
+import Users from './NewUsers';
 import { createBrowserRouter, RouterProvider,  } from 'react-router-dom';
-import SignIn from './NewLogin';
 import NewPosts from './NewPosts';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <SignIn />
+    element: <Login />
   },
-  // {
-  //   path: "/users",
-  //   element: <Users />
-  // }
+  {
+    path: "/users",
+    element: <Users />
+  },
   {
     path: "/posts",
     element: <NewPosts />
