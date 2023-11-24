@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Login from './NewLogin';
+import Login from './Login';
 import Users from './NewUsers';
 import { createBrowserRouter, RouterProvider,  } from 'react-router-dom';
-import NewPosts from './NewPosts';
+import Posts from './NewPosts';
 
 
 const router = createBrowserRouter([
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/posts",
-    element: <NewPosts />
+    element: <Posts />
   }
 ]);
 
