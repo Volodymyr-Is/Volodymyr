@@ -23,24 +23,20 @@ const NewPosts = () => {
     const [newPost, setNewPost] = useState({});
 
     const handleNewPost = (e) => {
-        const data = postData;
+        const data = newPost;
 
-        // if(e.target.id == 'postId'){
-        //     data['postId'] = "85345";
-        // }
-        // else if(e.target.id == 'userId'){
-        //     data['userId'] = "5716227";
-        // }
-        //else 
-        if(e.target.id == 'title'){
+        if(e.target.id === 'title'){
             data['title'] = e.target.value;
         }
-        else if(e.target.id == 'body'){
+        else if(e.target.id === 'body'){
             data['body'] = e.target.value;
         }
+        data['user'] = "v2"
+        data['user_id'] = "5773003"
         setNewPost(data)
     }
     console.log(newPost);
+
 
     const handleCreateNewPost = (e) => {
         const tmpToken = localStorage.getItem('token')
@@ -55,10 +51,11 @@ const NewPosts = () => {
                 Authorization: `Bearer ${tmpToken}`
             },
             body: JSON.stringify(newPost)
-        }).then(r => r.json()).then(data => setPostData(data));
+        }).then(r => r.json()).then(getPost());
     }
 
-    useEffect(() => {
+
+    const getPost = () => {
         const tmpToken = localStorage.getItem('token')
         if(!tmpToken){
             navigate('/')
@@ -68,54 +65,52 @@ const NewPosts = () => {
                     headers: {
                         Authorization: `Bearer ${tmpToken}`
                     }
-                }).then(r => r.json()).then(data => setPostData(data))
+                }).then(r => r.json()).then(data => {
+                    setPostData(data);
+                    console.log(data);
+                });
         }
+    }
+
+    useEffect(() => {
+        getPost()
     }, [])
+
     return(
-        <div style={{textAlign:"center", marginBottom:"30px"}}>
-            <Typography component="h1" variant="h5" style={{fontWeight: "bold", margin: "25px 0 30px 0"}}>Create New Post</Typography>
+        <div className="items-center bg-lime-500 min-h-screen text-center">
+            <div className="p-6">
+                <a href="./users" className="border border-2 border-black px-4 py-2 bg-white">Users</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="./posts" className="border border-2 border-black px-4 py-2 bg-white">Posts</a>
+            </div>
+            <Typography component="h1" variant="h4" style={{fontWeight: "bold"}} className="p-6 mb-8">Post List</Typography>
             {postData.map(user => 
-            <div key={user.id} style={{marginBottom: "30px", border: "2px solid black", marginLeft: "25%", marginRight:"25%", padding: "10px"}}>
-                <div style={{fontWeight: "800", textAlign: "center"}}>Post Id: {user.id}</div>
-                <div style={{fontWeight: "800", textAlign: "center"}}>User Id: {user.user_id}</div>
-                <div style={{fontWeight: "800", textAlign: "center"}}>Title: {user.title}</div>
+            <div key={user.id} style={{margin: "20px 30%", border: "2px solid black"}} className="bg-slate-300 p-2">
+                <div className="text-center font-extrabold">Post Id: {user.id}</div>
+                {/* <div className="text-center font-extrabold">User Id: {user.user_id}</div> */}
+                <div className="text-center font-extrabold">Title: {user.title}</div>
                 <div style={{width: "50%", textAlign: "center", marginLeft: "25%"}}>{user.body}</div>
             </div>)}
 
-            <div style={{border:"2px solid blue", marginLeft: "25%", marginRight:"25%", marginTop: "50px"}}>
-                {/* <div style={{fontWeight: "bold", marginTop: "10px"}}>Create New Post</div> */}
+            <div style={{border:"2px solid blue", margin: "50px 30% 0 30%"}} className="bg-slate-300 p-2">
                 <Typography component="h1" variant="h5" style={{fontWeight: "bold", marginTop: "10px"}}>Create New Post</Typography>
                 <form>
-                    {/* <div>
-                        <TextField 
-                        id="PostId" 
-                        label="Post Id (must countain only 5 numbers)" 
-                        style={{marginTop:"10px", width: "350px"}}
-                        onChange={handleNewPost}>
-                        </TextField>
-                    </div>
                     <div style={{marginTop:"7px"}}>
                         <TextField 
-                        id="UserId" 
-                        label="User Id (must countain only 7 numbers)" 
-                        style={{marginTop:"10px", width: "350px"}}
-                        onChange={handleNewPost}>
-                        </TextField>
-                    </div> */}
-                    <div style={{marginTop:"7px"}}>
-                        <TextField 
-                        id="Title" 
+                        id="title" 
                         label="Title" 
                         style={{marginTop:"10px", width: "350px"}}
-                        onChange={handleNewPost}>
+                        onChange={handleNewPost}
+                        className="bg-white rounded">
                         </TextField>
                     </div>
                     <div style={{marginTop:"7px"}}>
                         <TextField 
-                        id="Body" 
+                        id="body" 
                         label="Body" 
                         style={{marginTop:"10px", width: "350px"}}
-                        onChange={handleNewPost}>
+                        onChange={handleNewPost}
+                        className="bg-white rounded">
                         </TextField>
                     </div>
                     <Button
