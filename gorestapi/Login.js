@@ -63,8 +63,9 @@ const Login = () => {
                             className="w-full p-3 mb-4 rounded borded-gray-100 borded-2"/>
                         </div>
                         <div style={{marginBottom: "15px"}}>{error}</div>
-                        <Button variant="outlined" onClick={handleSubmit} style={{marginBottom: "15px", borderColor:"black", color: "black"}} endIcon={<SendIcon />}>Submit</Button>
-                        <button className="py-3 bg-teal-600 text-white-400"></button>
+                        <div className="text-center">
+                            <Button variant="outlined" onClick={handleSubmit} style={{marginBottom: "15px", borderColor:"black", color: "black"}} endIcon={<SendIcon />}>Submit</Button>
+                        </div>
                         </form>
                     </div>
                 </div>
